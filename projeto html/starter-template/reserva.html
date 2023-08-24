@@ -82,26 +82,25 @@
     Pet Online - Banhos para o seu Pets
   </footer>
 </div>
-
-
     <script src="bootstrap.bundle.min.js"></script>
     <script>
       function validarFormulario(e) {
-    const nome = document.getElementsById('id_nome').value
-    const telefone = document.getElementById('id_telefone').value
-    if(!nome || !telefone) {
-      alert('Os campos nome e telefone são obrigatórios')
-      e.preventDefault()
-    } else {
-      const text = `${nome} confirma a reserva com o número de telefone ${telefone}?`
-      if(!confirm(texto)) {
-        e.preventDefault()
+        const nome = document.getElementsById("id_nome").value
+        const telefone = document.getElementById("id_telefone").value
+
+        if(!nome || !telefone) {
+          alert("Os campos nome e telefone são obrigatórios!")
+          e.preventDefault()
+        } else {
+          const text = nome + ' confirma a reserva com o número de telefone ' + telefone + '?'
+          if(!confirm(texto)) {
+            e.preventDefault()
+          }
+        }
+        return true
       }
-    }
-    return True
-  }
-  const form = document.getElementById('form')
-  form.addEventListener('submit', validarFormulario)
+      const form = document.getElementById("form")
+      form.addEventListener("submit", validarFormulario)
     </script>
   </body>
 </html>
