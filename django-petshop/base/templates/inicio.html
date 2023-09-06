@@ -39,33 +39,29 @@
   </header>
 
   <main>
+    {% block principal %}
     <h1>Faça sua reserva de banho para o seu Pet</h1>
+    {% endblock %}
+  </main>
     <p class="fs-5 col-md-8">Você faz a sua reserva totalmente online, de forma fácil e segura.</p>
-
     <div class="mb-5">
       <a id="botao" href="reserva.html" class="btn btn-primary btn-lg px-4">
         Reserva Aqui
       </a>
     </div>
-
     <hr class="col-3 col-md-2 mb-5">
     </div>
-  </main>
   <footer class="pt-5 my-5 text-muted border-top">
-    <a id='contato' href='{% url 'contact' %}'>
+    <a id='contato' href='/contato'>
       Contato - Clique aqui!
     </a>
     Pet Online - Banhos para o seu Pets
   </footer>
 </div>
-
-
     <script src="/static/bootstrap.bundle.min.js"></script>
     <script>
       let botao = document.getElementbyID('botao')
       botao.innerText = 'Reserva Aqui Alterado'
     </script>
-
-      
   </body>
 </html>

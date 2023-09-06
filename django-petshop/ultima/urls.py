@@ -20,6 +20,6 @@ from base.views import inicio, contato
 
 urlpatterns = [
     path('', inicio),
-    path('contato/', contato, name='contact'),
+    path('contato/', contato),
     path('admin/', admin.site.urls),
 ]

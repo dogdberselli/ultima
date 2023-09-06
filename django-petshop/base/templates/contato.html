@@ -1,21 +1,18 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Contato</title>
-  </head>
-  <body>
-    <h1>Formulário de Contato</h1>
-    <form action="#" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
-
-        <input type="submit" value="Enviar">
-    </form>
-  </body>
-</html>
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+{% block principal %}
+<h1>Fale Conosco</h1>
+<p>
+  Envie uma mensagem atraves do formulário abaixo ou ligue para o telefone {{ telefone }} 
+  falando com a responsável {{ responsavel|lower }}
+</p>
+{% if sucesso %}
+<p class="alert alert-sucess">Mensagem enviada com sucesso!</p>
+{% endif %}
+<form action="" method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <hr>
+  <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+</form>
+{% endblock %}
