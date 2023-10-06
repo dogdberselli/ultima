@@ -40,18 +40,19 @@
 
   <main>
     <h1>Faça sua reserva de banho para o seu Pet</h1>
+
   </main>
     <p class="fs-5 col-md-8">Você faz a sua reserva totalmente online, de forma fácil e segura.</p>
     <div class="mb-5">
-      <a id="botao" href="{% url 'reserva:criar_reserva' %}" class="btn btn-primary btn-lg px-4">
+      <a id="botao" href="{% url 'reserva:criar_reserva' %}" class="btn btn-primary">
         Reserva Aqui
       </a>
     </div>
     <hr class="col-3 col-md-2 mb-5">
     </div>
   <footer class="pt-5 my-5 text-muted border-top">
-    <a id='contato' href="{% url 'contato' %}">
-      Contato - Clique aqui!
+    <a id='contato' href="{% url 'contato' %}" class="btn btn-primary">
+      Contato
     </a>
     <hr>
     Pet Online - Banhos para o seu Pets

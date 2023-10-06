@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from base.forms import ContatoForm, ReservaForm
 
+#view de inicio
 def inicio(request):
     return render(request, 'inicio.html')
     
+#view do contato
 def contato(request):
     sucesso = False
     if request.method == 'GET':
@@ -22,6 +24,7 @@ def contato(request):
     }
     return render(request, 'contato.html', contexto)
 
+#view de reserva
 def reserva(request):
     sucesso = False
     if request.method == 'GET':
@@ -37,5 +40,3 @@ def reserva(request):
         'sucesso': sucesso
     }
     return render(request, 'reserva.html', contexto)
-
-# Create your views here.
